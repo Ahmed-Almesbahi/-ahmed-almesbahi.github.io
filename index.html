@@ -9,6 +9,8 @@
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
 	<meta name="author" content="freehtml5.co" />
 
+	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link href="assets/css/main.css" rel="stylesheet">
 
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
@@ -24,6 +26,31 @@
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 	
+	
+
+	<!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  (function() {
+    emailjs.init("bkm6vNwWTox580hRo"); // Replace 'YOUR_USER_ID' with your actual EmailJS User ID
+  })();
+
+  function sendEmail(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_estgazp', 'template_a6l5lrm', '#contact-form')
+      .then(function(response) {
+         alert('SUCCESS!', response.status, response.text);
+      }, function(error) {
+         alert('FAILED...', error);
+      });
+  }
+</script>
+
+
+
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -56,15 +83,19 @@
 						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
 							<div class="profile-thumb" style="background: url(images/user-3.jpg);"></div>
 							<h1><span>Ahmed Almesbahi</span></h1>
-							<h3><span>Web Developer / Photographer</span></h3>
+							<h3><span>Senior Full Stack Developer</span></h3>
 							<p>
 								<ul class="fh5co-social-icons">
-									<li><a href="#"><i class="icon-twitter2"></i></a></li>
-									<li><a href="#"><i class="icon-facebook2"></i></a></li>
-									<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-									<li><a href="#"><i class="icon-dribbble2"></i></a></li>
-								</ul>
+									<li><a href="https://www.linkedin.com/in/ahmed-almesbahi/" target="_blank"><i class="icon-linkedin2"></i></a></li>
+									<li><a href="https://github.com/ahmed-almesbahi" target="_blank"><i class="icon-github2"></i></a></li>
+									<li><a href="https://web.telegram.org/k/#@amusbahisa" target="_blank"><i class="icon-telegram"></i></a></li>
+									<li><a href="mailto:amusbahisa@gmail.com" target="_blank"><i class="icon-email"></i></a></li>
+								</ul>								
 							</p>
+							<div class="btn-group" >
+								<div><a href="https://drive.google.com/file/d/1YHVJoPVMNYVqqivAJh2RkPAKjBDCT_Gr/view?usp=sharing" class="btn btn-outline">See my Resume</a></div>
+								<div><a href="https://amusbahisa.youcanbook.me/" class="btn btn-default book-btn btn-secondary">Book Me</a></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -83,7 +114,7 @@
 				<div class="col-md-4">
 					<ul class="info">
 						<li><span class="first-block">Full Name:</span><span class="second-block">Ahmed Almesbahi</span></li>
-						<li><span class="first-block">Phone:</span><span class="second-block">+ 90 552 2222 567</span></li>
+						<li><span class="first-block">Phone:</span><span class="second-block">+90 552 2222 567</span></li>
 						<li><span class="first-block">Email:</span><span class="second-block">amusbahisa@gmail.com</span></li>
 						<!-- <li><span class="first-block">Website:</span><span class="second-block">www.yoursite.com</span></li>
 						<li><span class="first-block">Address:</span><span class="second-block">198 West 21th Street, Suite 721 New York NY 10016</span></li> -->
@@ -91,14 +122,14 @@
 				</div>
 				<div class="col-md-8">
 					<h2>Hello There!</h2>
-					<p>There live the blind texts far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in bookmarksgrove there live the blind texts far from the countries.</p>
-					<p>Far far away, behind the word mountains, Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci there live the blind texts from the countries Vokalia and Consonantia, there live the blind texts. Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.</p>
+					<p>Senior Full Stack Software Developer with over 8 years of experience in crafting cutting-edge Mobile, Web, and Blockchain solutions.</p>
+					<p>Proficient in TypeScript, React.js, Node.js, React Native, and GraphQL, along with a strong command of various modern libraries and frameworks. Driven by a passion for innovation and delivering robust, scalable applications.</p>
 					<p>
 						<ul class="fh5co-social-icons">
-							<li><a href="#"><i class="icon-twitter2"></i></a></li>
-							<li><a href="#"><i class="icon-facebook3"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble2"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/ahmed-almesbahi/" target="_blank"><i class="icon-linkedin2"></i></a></li>
+							<li><a href="https://github.com/ahmed-almesbahi" target="_blank"><i class="icon-github2"></i></a></li>
+							<li><a href="https://web.telegram.org/k/#@amusbahisa" target="_blank"><i class="icon-telegram"></i></a></li>
+							<li><a href="mailto:amusbahisa@gmail.com" target="_blank"><i class="icon-email"></i></a></li>
 						</ul>
 					</p>
 				</div>
@@ -115,100 +146,194 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0">
-					<ul class="timeline">
+					````<ul class="timeline">
 						<li class="timeline-heading text-center animate-box">
 							<div><h3>Work Experience</h3></div>
 						</li>
+					
+						<!-- ApplyforJob -->
 						<li class="animate-box timeline-unverted">
 							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">Senior Developer</h3>
-									<span class="company">Company Name - 2016 - Current</span>
+									<h3 class="timeline-title">Founder - Senior Full Stack Developer</h3>
+									<span class="company">ApplyforJob · Self-employed - 2023 - 2024 · 7 mos</span>
 								</div>
 								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p>
+										• Scraping pages and auto-filling forms using AI<br>
+										• Built a desktop app<br>
+										• Implemented the project from scratch<br>
+										 <span class="company"><strong class="color">Technologies:</strong> Prisma ORM, TypeScript, JavaScript, Web Scraping (Puppeteer), Desktop app (Tauri), Rust, Zustand, Firebase (Functions - Auth), React.js, MySQL, Node.js.</span>
+									</p>
 								</div>
 							</div>
 						</li>
+					
+						<!-- MINI CACTI -->
 						<li class="timeline-inverted animate-box">
 							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">Junior Developer</h3>
-									<span class="company">Company Name - 2013 - 2015</span>
+									<h3 class="timeline-title">Senior Software Developer Team Lead</h3>
+									<span class="company">MINI CACTI. · Full-time - 2023 - 2023 · 6 mos</span>
 								</div>
 								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									<p>
+										• Implemented a minimum viable product (MVP) for an e-commerce platform.<br>
+										<span class="company"><strong class="color">Technologies:</strong> React Native, Node.js, GraphQL, Prisma ORM, MySQL, Redux.js, React Admin, TypeScript, JavaScript.</span>
+									</p>
 								</div>
 							</div>
 						</li>
+					
+						<!-- Outlet.Finance -->
 						<li class="animate-box timeline-unverted">
 							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">UI/UX Designer</h3>
-									<span class="company">Company Name - 2010 - 2012</span>
+									<h3 class="timeline-title">Senior Full Stack Developer</h3>
+									<span class="company">Outlet.Finance · Full-time - 2021 - 2023 · 1 yr 6 mos</span>
 								</div>
 								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p>
+										• Developed and integrated EVM-compatible wallets for secure transactions.<br>
+										• Reimplemented the design using TypeScript to enhance performance.<br>
+										• Added numerous features including push notifications, third-party service integration, and more.<br>
+										<span class="company"><strong class="color">Technologies:</strong> EVM Wallet, React.js, Next.js, TypeScript, MySQL, React Native, JavaScript, TypeORM, Ethers, Blockchain, Node.js, Firebase (Database - Firestore - Functions - Storage - Auth - Analytics), Redux.js.</span>
+									</p>
 								</div>
 							</div>
 						</li>
-
+					
+						<!-- Kartonah -->
+						<li class="timeline-inverted animate-box">
+							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Frontend Developer</h3>
+									<span class="company">Kartonah · Freelance - 2021 - 2021 · 7 mos</span>
+								</div>
+								<div class="timeline-body">
+									<p>
+										• Reimplemented the design and logic of the entire application.<br>
+										<span class="company"><strong class="color">Technologies:</strong> React.js, TypeScript, React Native, JavaScript.</span>
+									</p>
+								</div>
+							</div>
+						</li>
+					
+						<!-- animedown.tv -->
+						<li class="animate-box timeline-unverted">
+							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Full Stack Developer</h3>
+									<span class="company">animedown.tv · Full-time - 2019 - 2021 · 2 yrs 6 mos</span>
+								</div>
+								<div class="timeline-body">
+									<p>
+										• Developed a versatile video streaming platform with Mobile and web apps.<br>
+										• Built the admin dashboard, backend, and frontend from scratch.<br>
+										<span class="company"><strong class="color">Technologies:</strong> React Native, Ffmpeg, React Admin, React Native Web, Expo, MySQL, GraphQL, Prisma, Redux.js, Cloudflare, JavaScript, Node.js, AWS (S3 - EC2 - Route 53).</span>
+									</p>
+								</div>
+							</div>
+						</li>
+					
+						<!-- Tmooh -->
+						<li class="timeline-inverted animate-box">
+							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Founder & CTO</h3>
+									<span class="company">Tmooh · Self-employed - 2018 - 2019 · 1 yr 1 mo</span>
+								</div>
+								<div class="timeline-body">
+									<p>
+										• Merged/Reviewed 50+ PRs.<br>
+										• Designed and developed the platform and various software systems.<br>
+										<span class="company"><strong class="color">Technologies:</strong> React Native, GraphQL, AWS (EC2 - S3), Ffmpeg, Node.js, Prisma, MySQL.</span>
+									</p>
+								</div>
+							</div>
+						</li>
+					
+						<!-- Hakeemy -->
+						<li class="animate-box timeline-unverted">
+							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Frontend Developer</h3>
+									<span class="company">Hakeemy · Full-time - 2015 - 2017 · 2 yrs 2 mos</span>
+								</div>
+								<div class="timeline-body">
+									<p>
+										• Refactored and enhanced the application and performance.<br>
+										<span class="company"><strong class="color">Technologies:</strong> Redux.js, RESTful API, React Native, JavaScript.</span>
+									</p>
+								</div>
+							</div>
+						</li>
+					
+						<!-- Cadr Company -->
+						<li class="timeline-inverted animate-box">
+							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Marketing & Designer</h3>
+									<span class="company">Cadr Company · Full-time - 2013 - 2015 · 2 yrs 6 mos</span>
+								</div>
+								<div class="timeline-body">
+									<p>
+										• Designed and implemented over 10 websites.<br>
+										<span class="company"><strong class="color">Technologies:</strong> WordPress, HTML, CSS, Google Ads.</span>
+									</p>
+								</div>
+							</div>
+						</li>
+					
+						<!-- Mish -->
+						<li class="animate-box timeline-unverted">
+							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">CEO & Founder</h3>
+									<span class="company">Mish · Full-time - 2010 - 2013 · 2 yrs 11 mos</span>
+								</div>
+								<div class="timeline-body">
+									<p>
+										• Managed the entire project and handled most tasks independently, significantly enhancing my skills in online sales and branch operations.<br>
+										<span class="company"><strong class="color">Technologies:</strong> WordPress.</span>
+									</p>
+								</div>
+							</div>
+						</li>
+					
 						<br>
 						<li class="timeline-heading text-center animate-box">
 							<div><h3>Education</h3></div>
 						</li>
+					
+						<!-- Example Education -->
 						<li class="timeline-inverted animate-box">
 							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
 									<h3 class="timeline-title">Masters Degree</h3>
-									<span class="company">University Name - 2007 - 2009</span>
+									<span class="company">Bangalore University - 2007 - 2009</span>
 								</div>
 								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									<p>Bachelor of Computer Engineering.</p>
 								</div>
 							</div>
 						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Bachelors Degree</h3>
-									<span class="company">University Name - 2002 - 2006</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Diploma Course</h3>
-									<span class="company">College Name - 1999 - 2001</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Graduation</h3>
-									<span class="company">College Name - 1994 - 1998</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</li>
-			    	</ul>
+					
+						<!-- Additional education items... -->
+					
+					</ul>
+					
+					
 				</div>
 			</div>
 		</div>
@@ -230,78 +355,76 @@
 								<i class="icon-paintbrush"></i>
 							</span>
 							<div class="feature-copy">
-								<h3>Web Design</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<h3>Full Stack Web Development</h3>
+								<p>Expert in building end-to-end web applications using modern frameworks and technologies like React.js, Node.js, and TypeScript.</p>
 							</div>
 						</div>
 					</div>
-
-					<div class="col-md-4 text-center">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-briefcase"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Branding</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-							</div>
-						</div>
-
-					</div>
-					<div class="col-md-4 text-center">
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-search"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Analytics</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="row">
-					<div class="col-md-4 text-center">
-
-						<div class="feature-left">
-							<span class="icon">
-								<i class="icon-bargraph"></i>
-							</span>
-							<div class="feature-copy">
-								<h3>Web Developent</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-							</div>
-						</div>
-
-					</div>
-
+			
 					<div class="col-md-4 text-center">
 						<div class="feature-left">
 							<span class="icon">
 								<i class="icon-genius"></i>
 							</span>
 							<div class="feature-copy">
-								<h3>Web Marketing</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<h3>Blockchain Integration</h3>
+								<p>Develop and integrate blockchain solutions with a focus on Ethereum and EVM-compatible environments, including secure wallet integrations and blockchain-based application development.</p>
 							</div>
 						</div>
-
 					</div>
+			
+					<div class="col-md-4 text-center">
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-briefcase"></i>
+							</span>
+							<div class="feature-copy">
+								<h3>Mobile Application Development</h3>
+								<p>Build cross-platform mobile applications using React Native, ensuring a seamless user experience across both iOS and Android devices.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="row">
+					<div class="col-md-4 text-center">
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-bargraph"></i>
+							</span>
+							<div class="feature-copy">
+								<h3>Web Scraping & Automation</h3>
+								<p>Automate data extraction and form submissions using advanced web scraping techniques with Puppeteer and other modern tools.</p>
+							</div>
+						</div>
+					</div>
+			
+					<div class="col-md-4 text-center">
+						<div class="feature-left">
+							<span class="icon">
+								<i class="icon-genius"></i>
+							</span>
+							<div class="feature-copy">
+								<h3>API Development & Integration</h3>
+								<p>Design and implement RESTful and GraphQL APIs, integrating third-party services to enhance functionality and performance.</p>
+							</div>
+						</div>
+					</div>
+			
 					<div class="col-md-4 text-center">
 						<div class="feature-left">
 							<span class="icon">
 								<i class="icon-chat"></i>
 							</span>
 							<div class="feature-copy">
-								<h3>Support</h3>
-								<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+								<h3>Technical Consulting & Support</h3>
+								<p>Provide expert guidance on software architecture, code optimization, and best practices in full stack development.</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 
@@ -314,175 +437,139 @@
 			</div>
 			<div class="row row-pb-md">
 				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="95"><span><strong>HTML5</strong>95%</span></div>
+					<div class="chart" data-percent="95"><span><strong>TypeScript</strong>95%</span></div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="93"><span><strong>CSS3</strong>93%</span></div>
+					<div class="chart" data-percent="95"><span><strong>Nextjs</strong>95%</span></div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="90"><span><strong>jQuery</strong>90%</span></div>
-				</div>
-
-				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="89"><span><strong>PHP</strong>89%</span></div>
+					<div class="chart" data-percent="85"><span><strong>Block Chain</strong>85%</span></div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="85"><span><strong>MySQL</strong>85%</span></div>
+					<div class="chart" data-percent="100"><span><strong>React Native</strong>100%</span></div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="90"><span><strong>AngularJS</strong>90%</span></div>
+					<div class="chart" data-percent="90"><span><strong>Prisma ORM</strong>90%</span></div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="85"><span><strong>Ruby</strong>85%</span></div>
+					<div class="chart" data-percent="95"><span><strong>GraphQL</strong>95%</span></div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
-					<div class="chart" data-percent="90"><span><strong>Java</strong>90%</span></div>
+					<div class="chart" data-percent="90"><span><strong>Firebase</strong>90%</span></div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12 text-center">
+					<div class="chart" data-percent="100"><span><strong>Redux.js</strong>100%</span></div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="progress-wrap">
-						<h3><span class="name-left">HTML5/CSS3</span><span class="value-right">95%</span></h3>
+						<h3><span class="name-left">React.js</span><span class="value-right">95%</span></h3>
 						<div class="progress">
-						  <div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-						  </div>
+							<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
+								 aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+							</div>
 						</div>
 					</div>
 					<div class="progress-wrap">
-						<h3><span class="name-left">WordPress</span><span class="value-right">90%</span></h3>
+						<h3><span class="name-left">MySQL</span><span class="value-right">95%</span></h3>
 						<div class="progress">
-						  <div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-						  </div>
+							<div class="progress-bar progress-bar-2 progress-bar-striped active" role="progressbar"
+								 aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+							</div>
 						</div>
 					</div>
 					<div class="progress-wrap">
-						<h3><span class="name-left">PHP</span><span class="value-right">80%</span></h3>
+						<h3><span class="name-left">JavaScript</span><span class="value-right">100%</span></h3>
 						<div class="progress">
-						  <div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-						  </div>
+							<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
+								 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+							</div>
 						</div>
 					</div>
 					<div class="progress-wrap">
-						<h3><span class="name-left">Java</span><span class="value-right">85%</span></h3>
+						<h3><span class="name-left">AWS (S3, EC2, Route 53)</span><span class="value-right">80%</span></h3>
 						<div class="progress">
-						  <div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-						  </div>
+							<div class="progress-bar progress-bar-4 progress-bar-striped active" role="progressbar"
+								 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="progress-wrap">
-						<h3><span class="name-left">Design</span><span class="value-right">100%</span></h3>
+						<h3><span class="name-left">Node.js</span><span class="value-right">85%</span></h3>
 						<div class="progress">
-						  <div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-						  </div>
+							<div class="progress-bar progress-bar-5 progress-bar-striped active" role="progressbar"
+								 aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+							</div>
 						</div>
 					</div>
 					<div class="progress-wrap">
-						<h3><span class="name-left">Ruby</span><span class="value-right">70%</span></h3>
+						<h3><span class="name-left">Zustand</span><span class="value-right">100%</span></h3>
 						<div class="progress">
-						  <div class="progress-bar progress-bar-striped active" role="progressbar"
-						  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-						  </div>
+							<div class="progress-bar progress-bar-striped active" role="progressbar"
+								 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+							</div>
 						</div>
 					</div>
 					<div class="progress-wrap">
-						<h3><span class="name-left">Python</span><span class="value-right">85%</span></h3>
+						<h3><span class="name-left">Web Scraping (Puppeteer)</span><span class="value-right">90%</span></h3>
 						<div class="progress">
-						  <div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-						  </div>
+							<div class="progress-bar progress-bar-1 progress-bar-striped active" role="progressbar"
+								 aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+							</div>
 						</div>
 					</div>
 					<div class="progress-wrap">
-						<h3><span class="name-left">jQuery</span><span class="value-right">75%</span></h3>
+						<h3><span class="name-left">Rust</span><span class="value-right">25%</span></h3>
 						<div class="progress">
-						  <div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
-						  aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-						  </div>
+							<div class="progress-bar progress-bar-3 progress-bar-striped active" role="progressbar"
+								 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:25%">
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		
 	</div>
 
-	<div id="fh5co-work" class="fh5co-bg-dark">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Work</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-1.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
+
+
+			<div id="fh5co-work" class="fh5co-bg-dark">
+				<div class="container">
+					<div class="row animate-box">
+						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+							<h2>Open-Sourced Projects</h2>
 						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-2.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Brading</span>
+					</div>
+					<div class="row">
+						<div class="col-md-4 text-center col-padding animate-box">
+							<a href="https://github.com/Ahmed-Almesbahi/hakeemy" target="_blank" class="work" style="background-image: url(images/hakeemy.jpg);">
+								<div class="desc">
+									<h3>Hakeemy</h3>
+									<span>Facilitating the connection between doctors and patients with a cross-platform application and website. 95%+ code sharing between Android, iOS, and Web.</span>
+								</div>
+							</a>
 						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-3.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
+						<div class="col-md-4 text-center col-padding animate-box">
+							<a href="https://github.com/Ahmed-Almesbahi/anime-down-app" target="_blank" class="work" style="background-image: url(images/anime_down.webp);">
+								<div class="desc">
+									<h3>Anime-Down-App</h3>
+									<span>A unique streaming platform focused on Arabic cartoon movies and series. Available on web browsers, Android, and iOS devices.</span>
+								</div>
+							</a>
 						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-4.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Design</span>
+						<div class="col-md-4 text-center col-padding animate-box">
+							<a href="https://github.com/Ahmed-Almesbahi/kartonah" class="work" target="_blank" style="background-image: url(images/kartonah.jpg);">
+								<div class="desc">
+									<h3>Kartonah</h3>
+									<span>Revolutionizing B2B commerce by connecting businesses directly with Turkish factories, streamlining the procurement process.</span>
+								</div>
+							</a>
 						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-5.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Website</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-6.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-7.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Brading</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-8.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -490,59 +577,101 @@
 
 	<div id="fh5co-blog">
 		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Post on Medium</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/portfolio-1.jpg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">Mar. 15th 2016</span>
-							<h3><a href="#">Photoshoot On The Street</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<ul class="stuff">
-								<li><i class="icon-heart2"></i>249</li>
-								<li><i class="icon-eye2"></i>308</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
+			
+			
+			<!-- Testimonials Section -->
+			<section id="testimonials" class="testimonials section light-background">
+				
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>Testimonials</h2>
+						<p>Read what colleagues and collaborators have to say about Ahmed's exceptional skills and work ethic.</p>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/portfolio-2.jpg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">Mar. 15th 2016</span>
-							<h3><a href="#">Surfing at Philippines</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<ul class="stuff">
-								<li><i class="icon-heart2"></i>249</li>
-								<li><i class="icon-eye2"></i>308</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
+				<!-- Section Title -->
+				<!-- <div class="container section-title" data-aos="fade-up">
+				  <h2>Testimonials</h2>
+				  <p>Read what colleagues and collaborators have to say about Ahmed's exceptional skills and work ethic.</p>
+				</div>End Section Title -->
+			  
+				<div class="container" data-aos="fade-up" data-aos-delay="100">
+			  
+				  <div class="swiper init-swiper">
+					<script type="application/json" class="swiper-config">
+					  {
+						"loop": true,
+						"speed": 600,
+						"autoplay": {
+						  "delay": 5000
+						},
+						"slidesPerView": "auto",
+						"pagination": {
+						  "el": ".swiper-pagination",
+						  "type": "bullets",
+						  "clickable": true
+						}
+					  }
+					</script>
+					<div class="swiper-wrapper">
+			  
+					  <div class="swiper-slide">
+						<div class="testimonial-item">
+						  <img src="assets/img/testimonials/testimonials-1.jpeg" class="testimonial-img" alt="">
+						  <h3>Mohamed Khalil</h3>
+						  <h4>Full Stack Developer - Software Architect</h4>
+						  <div class="stars">
+							<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+						  </div>
+						  <p>
+							<i class="bi bi-quote quote-icon-left"></i>
+							<span>Ahmed is a standout programmer with a remarkable ability to tackle complex projects. He consistently delivers high-quality work and demonstrates a deep understanding of both front-end and back-end development. His dedication to continuous learning and staying ahead of tech trends is admirable. Ahmed is an invaluable member of any development team.</span>
+							<i class="bi bi-quote quote-icon-right"></i>
+						  </p>
+						</div>
+					  </div><!-- End testimonial item -->
+			  
+					  <div class="swiper-slide">
+						<div class="testimonial-item">
+						  <img src="assets/img/testimonials/testimonials-2.jpeg" class="testimonial-img" alt="">
+						  <h3>Abdullah Almesbahi</h3>
+						  <h4>Senior Full Stack Software/Blockchain Developer</h4>
+						  <div class="stars">
+							<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+						  </div>
+						  <p>
+							<i class="bi bi-quote quote-icon-left"></i>
+							<span>I am thoroughly impressed with Ahmed's programming skills and work ethic. His ability to efficiently solve complex coding challenges is exceptional, showing both depth and breadth in his technical expertise. Ahmed is also a great team player, always ready to share knowledge and support his colleagues. He brings a unique blend of technical prowess and collaborative spirit to any project.</span>
+							<i class="bi bi-quote quote-icon-right"></i>
+						  </p>
+						</div>
+					  </div><!-- End testimonial item -->
+			  
+					  <div class="swiper-slide">
+						<div class="testimonial-item">
+						  <img src="assets/img/testimonials/testimonials-3.jpeg" class="testimonial-img" alt="">
+						  <h3>ahmed Abdulwahab</h3>
+						  <h4>Software Engineer</h4>
+						  <div class="stars">
+							<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+						  </div>
+						  <p>
+							<i class="bi bi-quote quote-icon-left"></i>
+							<span>Ahmed's technical expertise is truly impressive. He consistently delivers outstanding results, whether he's working on front-end or back-end tasks. Ahmed is a quick learner and an excellent problem solver, making him an invaluable asset to any project. His ability to adapt to new challenges and technologies is remarkable.</span>
+							<i class="bi bi-quote quote-icon-right"></i>
+						  </p>
+						</div>
+					  </div><!-- End testimonial item -->
+			  
 					</div>
+					<div class="swiper-pagination"></div>
+				  </div>
+			  
 				</div>
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/portfolio-3.jpg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">Mar. 15th 2016</span>
-							<h3><a href="#">Capture Living On Uderwater</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<ul class="stuff">
-								<li><i class="icon-heart2"></i>249</li>
-								<li><i class="icon-eye2"></i>308</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-				</div>
-			</div>
+			  
+			  </section>
+			  
+
+
 		</div>
 	</div>
 	
@@ -552,8 +681,42 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Hire Me!</h2>
-					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-					<p><a href="#" class="btn btn-default btn-lg">Contact Us</a></p>
+					<p>Dedicated to delivering excellence in every project. Driven by passion and guided by experience, I consistently aim to exceed expectations.</p>
+					<!-- <p><a href="#" class="btn btn-default btn-lg">Contact Us</a></p> -->
+					<!-- <div class="btn-group" >
+						<div><a href="mailto:amusbahisa@gmail.com" target="_blank" class="btn btn-outline" style="background-color: #FF9000; border: 2px solid white !important; color: white !important;">Contact Me</a></div>
+						<div><a href="https://amusbahisa.youcanbook.me/" target="_blank" class="btn btn-default book-btn btn-secondary">Book Me</a></div>
+					</div> -->
+					<div class="btn-group">
+						<div>
+							<a href="mailto:amusbahisa@gmail.com" target="_blank" class="btn btn-outline" 
+							   style="background-color: #FF9000; border: 2px solid white !important; color: white !important; 
+									  text-align: center; display: inline-block; padding: 10px 20px; 
+									  line-height: 1.5; height: 50px; vertical-align: middle; transition: transform 0.3s ease;">
+								Contact Me
+							</a>
+						</div>
+						<div>
+							<a href="https://amusbahisa.youcanbook.me/" target="_blank" class="btn btn-default book-btn btn-secondary"
+							   style="text-align: center; display: inline-block; padding: 10px 20px; 
+									  line-height: 1.5; height: 50px; vertical-align: middle; transition: transform 0.3s ease;">
+								Book Me
+							</a>
+						</div>
+					</div>
+					
+					<script>
+						document.querySelectorAll('.btn-group a').forEach(function(btn) {
+							btn.addEventListener('mouseover', function() {
+								this.style.transform = 'scale(1.1)';
+							});
+							btn.addEventListener('mouseout', function() {
+								this.style.transform = 'scale(1)';
+							});
+						});
+					</script>
+					
+					
 				</div>
 			</div>
 		</div>
@@ -565,51 +728,61 @@
 		</div>
 		<div class="choose animate-box">
 			<h2>Contact</h2>
-			<form action="#">
+			<form id="contact-form" onsubmit="sendEmail(event)">
 				<div class="row form-group">
-					<div class="col-md-6">
-						<input type="text" id="fname" class="form-control" placeholder="Your firstname">
-					</div>
+				  <div class="col-md-6">
+					<input type="text" id="fname" name="firstname" class="form-control" placeholder="Your firstname">
+				  </div>
 				</div>
 				<div class="row form-group">
-					<div class="col-md-6">
-						<input type="text" id="lname" class="form-control" placeholder="Your lastname">
-					</div>
+				  <div class="col-md-6">
+					<input type="text" id="lname" name="lastname" class="form-control" placeholder="Your lastname">
+				  </div>
 				</div>
-
+			  
 				<div class="row form-group">
-					<div class="col-md-12">
-						<input type="text" id="email" class="form-control" placeholder="Your email address">
-					</div>
+				  <div class="col-md-12">
+					<input type="email" id="email" name="email" class="form-control" placeholder="Your email address">
+				  </div>
 				</div>
-
+			  
 				<div class="row form-group">
-					<div class="col-md-12">
-						<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
-					</div>
+				  <div class="col-md-12">
+					<input type="text" id="subject" name="subject" class="form-control" placeholder="Your subject of this message">
+				  </div>
 				</div>
-
+			  
 				<div class="row form-group">
-					<div class="col-md-12">
-						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
-					</div>
+				  <div class="col-md-12">
+					<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+				  </div>
 				</div>
 				<div class="form-group">
-					<input type="submit" value="Send Message" class="btn btn-primary">
+				  <input type="submit" value="Send Message" class="btn btn-primary">
 				</div>
-
-			</form>	
+			  </form>
+			  
 		</div>
 	</div>
 
-	<div id="map" class="fh5co-map"></div>
-	</div>
 	
 	<div id="fh5co-footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<p>&copy; 2017 Free HTML5 Template. All Rights Reserved. <br>Designed by <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.com" target="_blank">Unsplash</a></p>
+					<div class="col-md-8">
+						<p>Senior Full Stack Web and Mobile Applications Developer</p>
+						<!-- <p>Proficient in TypeScript, React.js, Node.js, React Native, and GraphQL, along with a strong command of various modern libraries and frameworks. Driven by a passion for innovation and delivering robust, scalable applications.</p> -->
+						<p>
+							<ul class="fh5co-social-icons fh5co-social-icons2">
+								<li><a href="https://www.linkedin.com/in/ahmed-almesbahi/" target="_blank"><i class="icon-linkedin2"></i></a></li>
+								<li><a href="https://github.com/ahmed-almesbahi" target="_blank"><i class="icon-github2"></i></a></li>
+								<li><a href="https://web.telegram.org/k/#@amusbahisa" target="_blank"><i class="icon-telegram"></i></a></li>
+								<li><a href="mailto:amusbahisa@gmail.com" target="_blank"><i class="icon-email"></i></a></li>
+							</ul>
+						</p>
+					</div>
+					<!-- <p>&copy; 2017 Free HTML5 Template. All Rights Reserved. <br>Designed by <a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a> Demo Images: <a href="http://unsplash.com" target="_blank">Unsplash</a></p> -->
 				</div>
 			</div>
 		</div>
@@ -635,6 +808,30 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
 	<script src="js/google_map.js"></script>
 	
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  var swiper = new Swiper('.swiper', {
+			loop: true,
+			speed: 600,
+			autoplay: {
+			  delay: 5000,
+			},
+			slidesPerView: 'auto',
+			pagination: {
+			  el: '.swiper-pagination',
+			  type: 'bullets',
+			  clickable: true,
+			},
+		  });
+		});
+	  </script>
+<!-- Swiper CSS -->
+<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	  
+
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
